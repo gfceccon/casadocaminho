@@ -1,6 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
   "rules": {
     "no-unused-vars": "warn"
-  }
+  },
+  "ignorePatterns": ["**/components/ui/*.tsx"]
 }
