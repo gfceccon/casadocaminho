@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
-import Link from "next/link";
 import {NavLink} from "@/lib/nav/navLink";
-import {Separator} from "@/components/ui/separator";
+import Link from "next/link";
+import {SidebarMenuButton} from "@/components/ui/sidebar";
 
 type Props = {
     link: NavLink
@@ -10,12 +10,14 @@ type Props = {
 
 export function AppSidebarButton(props: Props) {
     return (
-    <Link key={props.link.title} href={props.link.href}>
-        <div className={"flex flex-row items-center"}>
-            <props.link.icon className={"mr-2"} />
-            <span className={"font-semibold"}>{props.link.title}</span>
-        </div>
-    </Link>
-    )
-        ;
+        <Link key={props.link.title} href={props.link.href}>
+            <SidebarMenuButton
+                className={"h-10 hover:bg-palette-light-blue hover:text-white transition-colors duration-100"}>
+                <div className={"flex flex-row items-center gap-2"}>
+                    <props.link.icon/>
+                    <span className={"font-semibold"}>{props.link.title}</span>
+                </div>
+            </SidebarMenuButton>
+        </Link>
+    );
 }

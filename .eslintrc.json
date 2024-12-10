@@ -6,5 +6,5 @@
   "rules": {
     "no-unused-vars": "warn"
   },
-  "ignorePatterns": ["**/components/ui/*.tsx"]
+  "ignorePatterns": ["**/components/ui/*.tsx", "**/lib/prisma-client/**.js"]
 }

@@ -3,7 +3,7 @@ import {CalendarPlus, HomeIcon, LucideIcon, UserRoundPlus} from "lucide-react";
 export type NavLink = {
     title: string,
     href: string,
-    icon?: LucideIcon
+    icon: LucideIcon
 }
 
 export const navLinks: NavLink[] = [
@@ -15,13 +15,13 @@ export const navLinks: NavLink[] = [
     },
     {
         // Todos os eventos (cadastro de novo evento)
-        href: "/eventos",
+        href: "/event",
         title: "Eventos",
         icon: CalendarPlus,
     },
     {
         // Todas as Famílias (cadastro de nova família e membros)
-        href: "/familias",
+        href: "/family",
         title: "Famílias",
         icon: UserRoundPlus,
     },

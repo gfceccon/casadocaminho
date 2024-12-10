@@ -3,9 +3,10 @@
 
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/lib/prisma-client"
 }
 
-datasource db {
+datasource prisma {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }

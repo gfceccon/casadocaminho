@@ -30,7 +30,7 @@ Projeto feito em [Next.js](https://nextjs.org), [Prisma](https://www.prisma.io),
 * Instalar o projeto
   `npm install`
 * Gerar o banco de dados
-  `npm run db:push`
+  `npm run prisma:push`
 * Rodar o projeto em desenvolvimento
   `npm run dev`
 * Rodar em modo de produção
