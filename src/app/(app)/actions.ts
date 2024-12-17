@@ -1,19 +1,14 @@
 "use server"
-import {prisma} from "@/lib/prisma"
+
+import {db} from "@/db";
+import {gte, lte, and} from "drizzle-orm";
+
+import {events} from "@/db/schema/event";
 
 export async function getEventsFromDate(date: Date) {
-    return [];
-    // return prisma.event.findMany({
-    //     where: {
-    //         AND: {
-    //             startDate: {
-    //                 lte: date
-    //             },
-    //             endDate: {
-    //                 gte: date
-    //             }
-    //         }
-    //
-    //     }
-    // });
+    return db.select().from(events)
+        .where(and(
+            gte(events.startDate, date),
+            lte(events.endDate, date)
+        ));
 }

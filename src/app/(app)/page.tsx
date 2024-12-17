@@ -33,15 +33,16 @@ export default async function Home() {
                         <>
                             <h1 className={"font-bold text-4xl"}>Evento em Andamento</h1>
                             {
-                                // eventsToday.map((event) => {
-                                //     const date = dayjs(event.startDate);
-                                //     return (<div key={`${event.name}_${event.startDate}_${event.endDate}`}>
-                                //         <HomeCard href={`/event/${event.id}`}
-                                //                   className={"bg-palette-cerulean hover:bg-palette-violet"}>
-                                //             <p>{`${event.name} (${date.format("DD/MM/YYYY")})`}</p>
-                                //         </HomeCard>
-                                //     </div>)
-                                // })
+                                eventsToday.map((event) => {
+                                    const date = dayjs(event.startDate);
+                                    return (
+                                        <div key={`${event.name}_${event.startDate}_${event.endDate}`}>
+                                            <HomeCard href={`/event/${event.id}`}
+                                                      className={"bg-palette-cerulean hover:bg-palette-violet"}>
+                                                <p>{`${event.name} (${date.format("DD/MM/YYYY")})`}</p>
+                                            </HomeCard>
+                                        </div>)
+                                })
                             }
                         </>
                     )

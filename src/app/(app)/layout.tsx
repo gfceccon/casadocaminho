@@ -1,4 +1,3 @@
-// @flow
 import * as React from 'react';
 import {AppSidebar} from "@/components/sidebar/AppSidebar";
 import {SidebarInset, SidebarProvider} from "@/components/ui/sidebar";
