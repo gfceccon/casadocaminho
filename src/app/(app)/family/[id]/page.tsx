@@ -3,7 +3,7 @@ import {getFamily} from "@/app/(app)/family/[id]/actions";
 import {useRouter} from "next/navigation";
 
 type Props = {
-    children: React.ReactNode
+    children?: React.ReactNode
     params: Promise<{ id: string }>
 };
 

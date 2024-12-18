@@ -15,7 +15,7 @@ export function AppSidebarButton(props: Props) {
                 className={"h-10 hover:bg-palette-light-blue hover:text-white transition-colors duration-100"}>
                 <div className={"flex flex-row items-center gap-2"}>
                     <props.link.icon/>
-                    <span className={"font-semibold"}>{props.link.title}</span>
+                    <span className={"text-2xl"}>{props.link.title}</span>
                 </div>
             </SidebarMenuButton>
         </Link>

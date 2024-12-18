@@ -21,8 +21,8 @@ export function AppSidebar() {
             <SidebarHeader>
                 <SidebarMenuButton>
                     <div className={"flex flex-row gap-2 items-center"}>
-                        <HomeIcon size={32} color={headerIconColor}/>
-                        <span className={"font-bold text-xl"}>Casa do Caminho</span>
+                        <HomeIcon size={32} color={headerIconColor} strokeWidth={"1.75"}/>
+                        <span className={"font-semibold text-xl"}>Casa do Caminho</span>
                     </div>
                 </SidebarMenuButton>
             </SidebarHeader>

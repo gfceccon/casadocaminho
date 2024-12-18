@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 type Props = {
-    children: React.ReactNode
+    children?: React.ReactNode
     
 };
 
 export default function EventId(props: Props) {
     return (
-        <div>
+        <main>
         
-        </div>
+        </main>
     );
 };
