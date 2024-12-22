@@ -4,7 +4,7 @@ import {eventTypes} from "@/db/enum/eventEnums";
 
 export const eventTypeEnum = d.pgEnum("eventType", eventTypes);
 
-export const events = d.pgTable("events", {
+export const events = d.pgTable("event", {
     id: d.integer().primaryKey().generatedAlwaysAsIdentity(),
     name: d.text().notNull(),
     type: eventTypeEnum(),

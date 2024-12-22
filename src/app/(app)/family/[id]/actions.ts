@@ -2,7 +2,7 @@
 
 import {db} from "@/db";
 import {and, eq} from "drizzle-orm";
-import {familyMember, family} from "@/db/schema/_schema";
+import {familyMember, family} from "@/db/schema";
 import {notFound} from "next/navigation";
 import {TFamily, TFamilyMember, TFamilyMemberInsert} from "@/db/zod";
 
