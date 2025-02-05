@@ -20,13 +20,23 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/core": "7.16.2",
-    "@mantine/hooks": "7.16.2",
+    "@mantine/core": "^7.16.2",
+    "@mantine/dates": "^7.16.2",
+    "@mantine/form": "^7.16.2",
+    "@mantine/hooks": "^7.16.2",
+    "@mantine/modals": "^7.16.2",
+    "@mantine/notifications": "^7.16.2",
     "@next/bundle-analyzer": "^15.1.5",
     "@tabler/icons-react": "^3.28.1",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.1",
+    "drizzle-seed": "^0.3.1",
     "next": "15.1.5",
+    "pg": "^8.13.1",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -41,8 +51,10 @@
     "@types/eslint-plugin-jsx-a11y": "^6",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.7",
+    "@types/pg": "^8.11.11",
     "@types/react": "19.0.7",
     "babel-loader": "^9.2.1",
+    "drizzle-kit": "^0.30.4",
     "eslint": "^9.18.0",
     "eslint-config-mantine": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.10.2",

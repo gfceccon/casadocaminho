@@ -1,3 +1,10 @@
+# Run commands on git clone
+## Env variables
+* DATABASE_URL:< postgres connection string >
+## Commands
+`yarn install
+npx drizzle-kit generate`
+
 # Mantine Next.js template
 
 This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
