@@ -1,17 +1,26 @@
-import {dbTimestamps} from "../utils";
-import * as d from "drizzle-orm/pg-core";
-import {eventTypes} from "./enum/eventEnum";
+import { dbTimestamps } from "../utils";
+import * as pg from "drizzle-orm/pg-core";
+import { eventTypes } from "../enum/eventEnum";
+import { createSchemaFactory } from "drizzle-zod"
 
-export const eventTypeEnum = d.pgEnum("eventType", eventTypes);
+export const eventTypeEnum = pg.pgEnum("eventType", eventTypes);
 
-export const events = d.pgTable("event", {
-    id: d.integer().primaryKey().generatedAlwaysAsIdentity(),
-    name: d.text().notNull(),
-    type: eventTypeEnum(),
-    startDate: d.date({mode: "date"}).defaultNow(),
-    endDate: d.date({mode: "date"}).defaultNow(),
-    ...dbTimestamps,
+export const events = pg.pgTable("event", {
+  id: pg.integer().primaryKey().generatedAlwaysAsIdentity(),
+
+  name: pg.text().notNull(),
+  type: eventTypeEnum(),
+  startDate: pg.date({ mode: "date" }),
+  endDate: pg.date({ mode: "date" }),
+  ...dbTimestamps,
 }, (t) => [
-    d.uniqueIndex("event_type_idx").on(t.id),
+  pg.uniqueIndex("event_type_idx").on(t.id),
 ])
 
+
+const EventSchemaFactory = createSchemaFactory();
+export const EventSchema = {
+  insert: EventSchemaFactory.createInsertSchema(events),
+  update: EventSchemaFactory.createUpdateSchema(events),
+  select: EventSchemaFactory.createSelectSchema(events)
+};
